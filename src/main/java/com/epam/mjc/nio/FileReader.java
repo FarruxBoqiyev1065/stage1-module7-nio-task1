@@ -2,7 +2,6 @@ package com.epam.mjc.nio;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
@@ -21,8 +20,6 @@ public class FileReader {
             profile.setAge(Integer.valueOf(split[1].split(": ")[1]));
             profile.setEmail(split[2].split(": ")[1]);
             profile.setPhone(Long.valueOf(split[3].split(": ")[1]));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
